@@ -7,9 +7,30 @@
 }  
 html {
     font-size: 100%;
+    @include responde(tab-land) {
+        font-size: 56.25%;
+
+    }
+   
+    @include responde(tab-port) {
+        font-size: 50%;
+
+    }
+    
+    @include responde(big-desktop) {
+        font-size: 125%;
+
+    }
 }
 body {
    
     box-sizing: border-box;
+    padding: 1.875rem;
+
+
+    @include responde(tab-port) {
+    padding: 0;
+
+    }
 
 }
