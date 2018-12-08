@@ -12,7 +12,9 @@
     &:not(:last-child){
         margin-right: $gutter-horizontal;
 }
-
+@include responde(tab-port){
+    width: 100% !important;
+}
 }
 .col-1-of-2 {
     width: calc((100% - #{$gutter-horizontal}) / 2);
