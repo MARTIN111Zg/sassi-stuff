@@ -5,7 +5,7 @@ body{
     font-size: 16px;
     line-height: 1.7;
     color:#777;
-    padding: 1.875rem;
+    
 }
 
 .heading-primary {
@@ -20,6 +20,12 @@ body{
             font-weight: 400;
             letter-spacing: 2.18rem;
             animation: moveInLeft 3s ease-in;
+            @include responde(phone) {
+                letter-spacing: 1.5rem;
+                font-size: 3rem;
+            }
+
+
                 }
         &--sub {
         display: block;
@@ -27,6 +33,12 @@ body{
         font-weight: 700;
         letter-spacing: 1.1rem;
         animation: moveInRight 3s ease-out;
+        @include responde(phone) {
+            letter-spacing: .9rem;
+            
+        }
+
+
             }
     }
     .heading-secundary {
@@ -39,6 +51,17 @@ body{
         color:transparent;
         letter-spacing: .15rem;
         transition: all .3s;
+
+        @include responde(tab-port){
+            font-size: 1.95rem;
+
+
+        }
+        @include responde(phone){
+            font-size: 1.7rem;
+
+
+        }
 
         &:hover {
             transform: skewY(3deg) skewX(15deg) scale(1.1);
