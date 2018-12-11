@@ -5,12 +5,25 @@
     
     &:not(:last-child){
         margin-bottom: $gutter-vertical;
+        @include responde(tab-port){
+            margin-bottom:$gutter-vertical-small;
+         }
+
 }
+@include responde(tab-port){
+    max-width:37.5rem;
+    padding: 0 1.9rem;
+ }
+
 @include clearfix;
 [class^="col-"]{
    float: left;
     &:not(:last-child){
         margin-right: $gutter-horizontal;
+        @include responde(tab-port){
+           margin-right:0;
+           margin-bottom: $gutter-vertical-small;
+        }
 }
 @include responde(tab-port){
     width: 100% !important;

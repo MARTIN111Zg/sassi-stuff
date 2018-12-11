@@ -9,6 +9,15 @@ padding-left: 5.625rem;
 font-size: 1rem;
 transform: skewX(-12deg);
 
+@include responde(tab-port){
+    width: 100%;
+    padding: 2.5rem;
+padding-left: 4.425rem;
+}
+@include responde(phone){
+    transform: skewX(0);
+}
+
 &__shape {
     width:9.375rem;
     height: 9.375rem;
@@ -20,6 +29,9 @@ transform: skewX(-12deg);
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-1.875rem) skewX(12deg);
     position: relative;
+    @include responde(phone){
+        transform:translateX(-1.875rem) skewX(0);
+    }
 }
 &__img {
     height:100%;
@@ -30,6 +42,9 @@ transform: skewX(-12deg);
 }
 &__text {
     transform: skewX(12deg);
+    @include responde(phone){
+        transform: skewX(0);
+    }
 }
 &__caption {
     position: absolute;
